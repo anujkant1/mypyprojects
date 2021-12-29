@@ -30,26 +30,22 @@ There is no pair of these numbers that sum to 98
 """
 
 array = [1, 2, 3, 4, 5, 6, 7]
-
 target = 8
-elements = 7
 
-
-def sumpair(array, target):
-    result = []
-    left = 0
-    right = len(array) - 1
-    while (left < right):
-        if array[left] + array[right] > target:
+def countPairs(arr, k):
+    result = 0
+    left, right = 0, len(arr) - 1
+    while left < right:
+        if arr[left] + arr[right] == k:
+            result += 1
+            left += 1
+            right -= 1  # Safe to move on both ends as elements are unique and sorted.
+        elif arr[left] + arr[right] < k:
+            left += 1
+        else:
             right -= 1
-        elif array[left] + array[right] < target:
-            left += 1
-        elif array[left] + array[right] == target:
-            result.append([array[left], array[right]])
-            left += 1
-    if not result:
-        return "Not found"
     return result
 
 
-print(sumpair(array, target))
+
+print(countPairs(array, target))
