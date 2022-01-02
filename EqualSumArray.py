@@ -15,9 +15,7 @@ Explanation: If 1 is the partition,
  
 """
 
-
 array = [2, 3, 4, 1, 4, 5]
-
 
 def findMiddle(array):
     for i in range(1, len(array)):
