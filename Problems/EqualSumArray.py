@@ -21,7 +21,37 @@ def findMiddle(array):
     for i in range(1, len(array)):
         if sum(array[:i]) == sum(array[i+1:]):
             return array[i]
-    return "-1"
+    return -1
 
 
 print(findMiddle(array))
+
+
+
+# Below solution without using sum()
+
+arr = [5, 25, 20, 32, 2, 23, 20, 5]
+
+def equalSum(arr):
+    left_pos, right_pos = 0, len(arr) - 1
+    left_sum, right_sum = 0, 0
+
+    while left_pos < right_pos:
+        left_sum += arr[left_pos]
+        right_sum += arr[right_pos]
+
+        while (left_sum < right_sum):
+            left_pos += 1
+            left_sum += arr[left_pos]
+
+        while (right_sum < left_sum):
+            right_pos -= 1
+            right_sum += arr[right_pos]
+        right_pos -= 1
+        left_pos += 1
+    if (left_sum == right_sum and left_pos == right_pos):
+        return(arr[left_pos])
+    return -1
+
+
+print(equalSum(arr))
