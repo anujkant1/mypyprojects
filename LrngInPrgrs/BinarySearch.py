@@ -2,7 +2,7 @@ array = [2, 4, 5, 7, 8, 9, 15, 20, 25, 30, 32, 35]
 target = 31
 
 
-def BinarySearch(array, target):
+def binarySearch(array, target):
     left = 0
     right = len(array) - 1
 
