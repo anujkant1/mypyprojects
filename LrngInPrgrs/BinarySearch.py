@@ -1,5 +1,5 @@
 array = [2, 4, 5, 7, 8, 9, 15, 20, 25, 30, 32, 35]
-target = 32
+target = 31
 
 
 def BinarySearch(array, target):
@@ -11,8 +11,8 @@ def BinarySearch(array, target):
         if target == array[middle]:
             return middle
         elif target < array[middle]:
-            right == middle - 1
-        elif target > array[middle]:
+            right = middle - 1
+        else:
             left = middle + 1
 
     return -1
