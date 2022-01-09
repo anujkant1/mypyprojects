@@ -18,4 +18,4 @@ def binarySearch(array, target):
     return -1
 
 
-print(BinarySearch(array, target))
+print(binarySearch(array, target))
