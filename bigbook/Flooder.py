@@ -17,7 +17,7 @@ except ImportError:
 # Set up the constants:
 BOARD_WIDTH = 20
 BOARD_HEIGHT = 18
-MOVES_PER_GAME = 25
+MOVES_PER_GAME = 24
 
 # Constants for the different shapes used in colorblind mode:
 HEART = chr(9829)  # Character 9829 is '♥'.
