@@ -1,5 +1,5 @@
 """Leetspeak
-Translates English messages into l33t5p34]<."""
+Translate English messages to l33t5p34]<."""
 
 import random
 
