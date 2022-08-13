@@ -52,8 +52,7 @@ the game ends. Whoever has the most points wins.
 
 There are 6 Gold dice, 4 Silver dice, and 3 Bronze dice in the cup.
 Gold dice have more Stars, Bronze dice have more Skulls, and Silver is
-even.
-""")
+even.""")
 
 print('How many players are there?')
 while True:  # Loop until the user enters a number.
