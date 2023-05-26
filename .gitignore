@@ -123,6 +123,7 @@ pyvenv.cfg
 
 # mkdocs documentation
 /site
+Problems/check.py
 
 # mypy
 .mypy_cache/
