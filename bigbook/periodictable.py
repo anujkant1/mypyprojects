@@ -12,7 +12,7 @@ import sys
 import re
 
 # Read in all the data from periodictable.csv.
-elementsFile = open('periodictable.csv', encoding='utf-8')
+elementsFile = open('bigbook/periodictable.csv', encoding='utf-8')
 elementsCsvReader = csv.reader(elementsFile)
 elements = list(elementsCsvReader)
 elementsFile.close()
@@ -84,5 +84,5 @@ while True:  # Main program loop.
     if response in ELEMENTS:
         for key in ALL_COLUMNS:
             keyJustified = key.rjust(LONGEST_COLUMN)
-        input('Press enter to continue...')
-        print(keyJustified + ': ' + ELEMENTS[response][key])
+            print(keyJustified + ': ' + ELEMENTS[response][key])
+        input('Press Enter to continue...')
