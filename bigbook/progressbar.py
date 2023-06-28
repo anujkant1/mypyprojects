@@ -1,5 +1,5 @@
 """Progress Bar Simulation
-A sample progress bar animation that can be used in other programs."""
+A sample progress bar animation that can be used in other"""
 
 import random
 import time
