@@ -6,14 +6,16 @@ Simon."""
 import random
 import sys
 import time
+
+
 try:
     import playsound
 except ImportError:
     print('''
 The playsound module needs to be installed to run this
-program. on Windows, open a Command Prompt and run:
+program. On Windows, open a Command Prompt and run:
 pip install playsound
-on MacOS and Linux, open a Terminal and run
+On macOS and Linux, open a Terminal and run
 pip3 install playsound''')
     sys.exit()
 
@@ -24,20 +26,21 @@ as it gets longer and longer.''')
 input('Press Enter to begin...')
 
 pattern = ''
+sound_path = sys.path[0] + '/addons/'
 while True:
-    print('\n * 60')  # Clear the screen by printing several new lines.
+    print('\n' * 60)  # Clear the screen by printing several newlines.
 
     # Add a random letter to the pattern:
     pattern += random.choice('ASDF')
 
     # Display the pattern (and play their sounds):
-    print('Patther: ', end='')
+    print('Pattern: ', end='')
     for letter in pattern:
         print(letter, end=' ', flush=True)
-        playsound.playsound('sound' + letter + '.wav')
+        playsound.playsound(sound_path + 'sound' + letter + '.wav')
 
     time.sleep(1)  # Add a slight pause at the end.
-    print('\n * 60')  # Clear the screen by printing several newlines.
+    print('\n' * 60)  # Clear the screen by printing several newlines.
 
     # Let the player enter the pattern:
     print('Enter the pattern:')
@@ -50,7 +53,7 @@ while True:
         print('Correct!')
 
     for letter in pattern:
-        playsound.playsound('sound' + letter + '.wav')
+        playsound.playsound(sound_path + 'sound' + letter + '.wav')
 
     if response != pattern:
         print('You scored', len(pattern) - 1, 'points.')
