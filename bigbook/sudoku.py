@@ -161,7 +161,7 @@ For example, here is a starting Sudoku grid and its solved form:
 input('Press Enter to begin...')
 
 # Load the sudokupuzzles.txt file:
-with open('sudokupuzzles.txt') as puzzleFile:
+with open('bigbook/addons/sudokupuzzles.txt') as puzzleFile:
     puzzles = puzzleFile.readlines()
 
 # Remove the newlines at the end of each puzzle:
