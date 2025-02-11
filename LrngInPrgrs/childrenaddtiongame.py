@@ -7,7 +7,7 @@ import random
 import sys
 
 def get_random_numbers():
-    return random.randint(1, 9), random.randint(1, 9)
+    return random.randint(1, 20), random.randint(1, 20)
 
 def get_child_response(num1, num2):
     print(f"What is {num1} + {num2}?")
