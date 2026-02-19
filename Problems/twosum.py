@@ -31,12 +31,12 @@ print(optimal_twoSum(array, target))
 ## Alternative Optimal Approach
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        number_to_index = {}
+        hash_table = {}
 
-        for index, number in enumerate(nums):
-            number_to_index[number] = index
+        for index, value in enumerate(nums):
+            hash_table[value] = index
 
-        for index, number in enumerate(nums):
-            number_needed = target - number
-            if (number_needed in number_to_index and number_to_index[number_needed] != index):
-                return [index, number_to_index[number_needed]]
+        for index, value in enumerate(nums):
+            num_needed = target - value
+            if (num_needed in hash_table and hash_table[num_needed] != index):
+                return [index, hash_table[num_needed]]
