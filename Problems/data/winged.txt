@@ -1,0 +1,8 @@
+chicken
+bat
+eagle
+vulture
+penguin
+peacock
+albatroz
+kingfisher
