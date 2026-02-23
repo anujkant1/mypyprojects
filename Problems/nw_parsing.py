@@ -6,7 +6,7 @@ Given a list of network device names, device_list = ["IO", "IC", "MAD08S06", "TG
 """
 import re
 
-device_list = ["IO", "IC", "MAD08S06", "TG", "FJR02S08", "LAX17S38", "MAA01R03", "IH", "SIN04R02"]
+device_list = ["IO", "IC", "MAD08S06", "TG", "FJR02S08", "LAX17S38", "MAA01R03", "IH", "SIN04R02", "FJR02F08"]
 
 DEVICE_REGEX = re.compile(r'^([A-Z]{3})(\d{2})([A-Z])(\d{2})$')
 
@@ -21,7 +21,8 @@ def count_device_types_mapped(device_names):
     """Count how many devices belong to each device type."""
     device_dict = {
         'router': 0,
-        'switch': 0
+        'switch': 0,
+        'unclassified': []
         }
 
     for device in find_devices(device_list):
@@ -30,9 +31,10 @@ def count_device_types_mapped(device_names):
             device_dict['router'] += 1
         elif match_obj.group(3).lower() == 's':
             device_dict['switch'] += 1
+        else:
+            device_dict['unclassified'].append(device)
 
     return device_dict
-
 
 
 print(find_devices(device_list))
