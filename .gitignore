@@ -125,6 +125,7 @@ pyvenv.cfg
 # mkdocs documentation
 /site
 Problems/check.py
+check.txt
 
 # mypy
 .mypy_cache/
